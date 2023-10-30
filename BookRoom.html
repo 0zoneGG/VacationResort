@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Opal Resort</title>
+   <link rel="stylesheet" href="CSS/Styling.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="Scripts/RoomTotal.js" ></script>
+</head>
+<body>
+       <header>
+            <nav class="navbar" style="background-color: #9dd6ff;" >
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Opal Vacationals</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="BookRoom.html">Book Room</a>
+                      </li>
+
+                  </div>
+                </div>
+              </nav>
+
+    </header>
+    <div class="container">
+        <h1>Resort Reservation Form</h1>
+        <form id="reservationForm">
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" class="form-control" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="checkInDate">Check-in Date:</label>
+                <input type="date" class="form-control" id="checkInDate" name="checkInDate" required>
+            </div>
+            <div class="form-group">
+                <label for="numberOfNights">Number of Nights (1-28):</label>
+                <input type="number" class="form-control" id="numberOfNights" name="numberOfNights" min="1" max="28" required>
+            </div>
+            <div class="form-group">
+                <label>Room Type:</label>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="queen" name="roomType" value="Queen">
+                    <label class="form-check-label" for="queen">Queen</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="king" name="roomType" value="King">
+                    <label class="form-check-label" for="king">King</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="suite" name="roomType" value="2-Bedroom Suite">
+                    <label class="form-check-label" for="suite">2-Bedroom Suite</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="adults">Number of Adults (1-4):</label>
+                <input type="number" class="form-control" id="adults" name="adults" min="1" max="4" required>
+            </div>
+            <div class="form-group">
+                <label for="children">Number of Children (0-4):</label>
+                <input type="number" class="form-control" id="children" name="children" min="0" max="4" required>
+            </div>
+            <div class="form-group">
+                <label>Discounts:</label>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="none" name="discount" value="None" checked>
+                    <label class="form-check-label" for="none">None</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="aaa" name="discount" value="AAA/Senior">
+                    <label class="form-check-label" for="aaa">AAA/Senior (10%)</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="military" name="discount" value="Military">
+                    <label class="form-check-label" for="military">Military (20%)</label>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" id="calculateTotal">Total</button>
+        </form>
+        <div id="itinerary" style="display: none;">
+            <h3>Itinerary</h3>
+            <p id="checkInDateDisplay"></p>
+            <p id="guestNameDisplay"></p>
+            <p id="guestEmailDisplay"></p>
+            <p id="roomTypeDisplay"></p>
+            <p id="numberOfNightsDisplay"></p>
+            <p id="discountAppliedDisplay"></p>
+            <p id="roomTotalDisplay"></p>
+        </div>
+    </div>
+        <footer>
+            <div class="footer-content">
+              <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>Email: juan@juan.juan</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Address: 123 Main Street, Phoenix, Arizona</p>
+              </div>
+              <div class="social-media">
+                <h2>Follow Us</h2>
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">LinkedIn</a>
+              </div>
+              <div class="about-us">
+                <h2>About Us</h2>
+                <p>
+                  Morbi luctus risus mauris, bibendum finibus lectus iaculis ut. Morbi
+                  ac nunc a libero efficitur laoreet. Duis enim velit, feugiat vel
+                  egestas ut, suscipit sit amet nisl. Donec sagittis mollis ipsum
+                  vitae euismod. Morbi at lacus elementum.
+                </p>
+              </div>
+            </div>
+          </footer>
+
+          
+    </body>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </html>

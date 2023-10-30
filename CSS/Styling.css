@@ -1,0 +1,54 @@
+body {
+    background-color: aquamarine;
+}
+
+#jumbotron {
+    padding-top: 3em ;
+    padding-right: 3em;
+    padding-bottom: 3em;
+    padding-left: 3em;
+   
+    
+}
+
+
+footer {
+    background-color: #f0f0f0;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info,
+.social-media,
+.about-us {
+    text-align: center;
+    width: 30%;
+}
+
+.contact-info h2,
+.social-media h2,
+.about-us h2 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.social-link {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.social-link:hover {
+    text-decoration: underline;
+}
+
+
+
